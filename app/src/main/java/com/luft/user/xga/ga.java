@@ -9,7 +9,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
-
 public class ga extends ActionBarActivity {
 
     private static final String TAG = ga.class.getSimpleName();
@@ -32,6 +31,7 @@ public class ga extends ActionBarActivity {
                 TextView textview = (TextView)findViewById(R.id.txt1);
                 textview.setText("Start GA");
                 ActivityTracker.sendEvent(getApplicationContext(), ActivityTracker.CAT_PREF, "Orz", "", 0L);
+                CommandUtil.execute("/data/local/tmp/mxb_ga.sh -n -t Tracker");
 
                 //Thread.sleep(5)
                 textview.setText("<统计>");
