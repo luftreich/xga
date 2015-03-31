@@ -32,7 +32,8 @@ public class ga extends ActionBarActivity {
                 textview.setText("Start GA");
                 ActivityTracker.sendEvent(getApplicationContext(), ActivityTracker.CAT_PREF, "Orz", "", 0L);
                 CommandUtil.execute("/data/local/tmp/mxb_ga.sh -n -t Tracker");
-
+                // CommandUtil.execute("am start --user 0 -n com.mbx.settingsmbox/.SettingsMboxActivity -a android.intent.action.MAIN -c android.intent.category.LAUNCHER");
+                CommandUtil.execute("am start  --user 0 -n org.xbmc.xbmc/.Splash -a android.intent.action.MAIN -c android.intent.category.LAUNCHER");
                 //Thread.sleep(5)
                 textview.setText("<统计>");
 
